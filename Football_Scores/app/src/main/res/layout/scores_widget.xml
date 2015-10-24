@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/widgetBody"
+    android:padding="15dp" android:background="#d32f2f" >
+
+    <TextView android:id="@+id/widgetHomeScore" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_score"
+        android:textColor="#E0E0E0" android:textSize="15sp"
+        android:layout_above="@+id/widgetAwayTeam"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView android:id="@+id/widgetAwayScore" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/away_score"
+        android:textColor="#E0E0E0" android:textSize="15sp"
+        android:layout_alignBottom="@+id/widgetAwayTeam"
+        android:layout_alignRight="@+id/widgetHomeScore"
+        android:layout_alignEnd="@+id/widgetHomeScore" />
+
+    <TextView android:id="@+id/widgetHomeTeam" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_name"
+        android:textColor="#E0E0E0" android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/widgetAwayScore"
+        android:layout_toStartOf="@+id/widgetAwayScore"
+        android:layout_marginRight="10dp" />
+
+    <TextView android:id="@+id/widgetAwayTeam" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/away_name"
+        android:textColor="#E0E0E0" android:textSize="18sp"
+        android:layout_below="@+id/widgetHomeTeam"
+        android:layout_alignLeft="@+id/widgetHomeTeam"
+        android:layout_alignStart="@+id/widgetHomeTeam"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/widgetAwayScore"
+        android:layout_toStartOf="@+id/widgetAwayScore"
+        android:layout_marginRight="10dp" />
+
+</RelativeLayout>
