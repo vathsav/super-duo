@@ -1,5 +1,7 @@
 package barqsoft.footballscores;
 
+import android.content.res.Resources;
+
 /**
  * Created by yehya khaled on 3/3/2015.
  */
@@ -18,33 +20,34 @@ public class Utilities {
     public static final int EREDIVISIE = 404;
 
     public static String getLeague(int league_num) {
+        Resources res = Resources.getSystem();
         switch (league_num) {
             case SERIE_A:
-                return "Seria A";
+                return res.getString(R.string.league_Seria_A);
             case CHAMPIONS_LEAGUE:
-                return "UEFA Champions League";
+                return res.getString(R.string.league_UEFA_Champions_League);
             case PRIMERA_DIVISION:
-                return "Primera Division";
+                return res.getString(R.string.league_Primera_Division);
             case PRIMERA_LIGA:
-                return "Primera Liga";
+                return res.getString(R.string.league_Primera_Liga);
             case BUNDESLIGA1:
-                return "Bundesliga 1";
+                return res.getString(R.string.league_Bundesliga1);
             case BUNDESLIGA2:
-                return "Bundesliga 2";
+                return res.getString(R.string.league_Bundesliga2);
             case Bundesliga3:
-                return "Bundesliga 3";
+                return res.getString(R.string.league_Bundesliga3);
             case LIGUE1:
-                return "Ligue 1";
+                return res.getString(R.string.league_Ligue1);
             case LIGUE2:
-                return "Ligue 2";
+                return res.getString(R.string.league_Ligue2);
             case PREMIER_LEAGUE:
-                return "Premier League";
+                return res.getString(R.string.league_Premier_League);
             case SEGUNDA_DIVISION:
-                return "Segunda Division";
+                return res.getString(R.string.league_Segunda_Division);
             case EREDIVISIE:
-                return "Eredivisie";
+                return res.getString(R.string.league_Eredivisie);
             default:
-                return "Unknown League";
+                return res.getString(R.string.league_Unknown_League);
         }
     }
 

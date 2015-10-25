@@ -78,9 +78,17 @@ public class ScoresDetailedWidgetIntentService extends RemoteViewsService {
 
                 RemoteViews views = new RemoteViews(getPackageName(), R.layout.scores_detailed_widget_list_item);
                 views.setTextViewText(R.id.widgetAwayTeam, cursor.getString(1));
-                views.setTextViewText(R.id.widgetAwayScore, cursor.getString(2));
+                // Away Goals
+                if (cursor.getString(2).equals("-1"))
+                    views.setTextViewText(R.id.widgetAwayScore, "-");
+                else
+                    views.setTextViewText(R.id.widgetAwayScore, cursor.getString(2));
                 views.setTextViewText(R.id.widgetHomeTeam, cursor.getString(3));
-                views.setTextViewText(R.id.widgetHomeScore, cursor.getString(4));
+                // Home Goals
+                if (cursor.getString(2).equals("-1"))
+                    views.setTextViewText(R.id.widgetHomeScore, "-");
+                else
+                    views.setTextViewText(R.id.widgetHomeScore, cursor.getString(4));
 
                 return views;
             }

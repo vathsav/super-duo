@@ -264,7 +264,6 @@ public class FetchService extends IntentService {
         }
 
         Intent dataUpdatedIntent = new Intent(ACTION_UPDATED);
-        dataUpdatedIntent.putExtra("Content", "YOYOYO");
         getApplicationContext().sendBroadcast(dataUpdatedIntent);
     }
 }
