@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import me.dm7.barcodescanner.zbar.BarcodeFormat;
 import me.dm7.barcodescanner.zbar.ZBarScannerView;
 
 public class ScannerActivity extends AppCompatActivity implements ZBarScannerView.ResultHandler {
@@ -15,6 +19,10 @@ public class ScannerActivity extends AppCompatActivity implements ZBarScannerVie
         super.onCreate(state);
         mScannerView = new ZBarScannerView(this);    // Programmatically initialize the scanner view
         setContentView(mScannerView);                // Set the scanner view as the content view
+        List<BarcodeFormat> list = new ArrayList<>();
+        BarcodeFormat barcodeFormat = BarcodeFormat.EAN13;
+        list.add(barcodeFormat);
+        mScannerView.setFormats(list);
     }
 
     @Override
